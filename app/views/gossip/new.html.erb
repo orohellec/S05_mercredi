@@ -1,0 +1,6 @@
+<h2>Un potin à ajouter? Remplis ce formulaire et humilie tes amis</h2>
+<%= session[:user_id] %>
+<%= form_for @gossip, url: {action: "create"} do |f| %>
+  <%= f.text_area :content, class: 'form-control', placeholder: 'Gossip', size: "42x4.2" %><br/>
+  <%= f.submit "Envoyer", class: "btn btn-primary mb-2"%><br/>
+<% end %>

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  root "static_pages#home"
+  get 'registration/new'
+  post 'registration/create'
+  get 'registration/connect'
+  post 'registration/check'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :gossip
 end

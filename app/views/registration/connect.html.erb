@@ -1,0 +1,7 @@
+<h1>Connectez vous</h1>
+
+<%= form_for @user, url: {action: "check"} do |f| %>
+  <%= f.text_field :email, class: 'form-control', placeholder: 'email' %>
+  <%= f.text_field :password, class: 'form-control', placeholder: 'password' %><br />
+  <%= f.submit "Envoyer", class: "btn btn-primary mb-2"%><br/>
+<% end %>

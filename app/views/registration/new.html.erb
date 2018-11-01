@@ -1,0 +1,8 @@
+<h1>Inscrivez vous</h1>
+
+<%= form_for @user, url: {action: "create"} do |f| %>
+  <%= f.text_field :username, class: 'form-control', placeholder: 'username' %>
+  <%= f.text_field :email, class: 'form-control', placeholder: 'email' %>
+  <%= f.text_field :password, class: 'form-control', placeholder: 'password' %><br />
+  <%= f.submit "Envoyer", class: "btn btn-primary mb-2"%><br/>
+<% end %>
