@@ -1,0 +1,25 @@
+// Place all the styles related to the gossip controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#gossips_container
+{
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#gossip_container
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.card
+{
+  margin-top: 10px;
+  margin-right: 10px;
+}

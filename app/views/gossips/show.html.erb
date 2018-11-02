@@ -1,0 +1,11 @@
+
+<div id="gossip_container">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= User.where(id: @one_gossip[:user_id])[0]["username"] %></h5>
+        <p class="card-text"><%= @one_gossip[:content] %></p>
+        <a href="/gossips/<%= @one_gossip[:id] %>/edit" class="card-link">Editer</a>
+    <a href="/gossips" class="card-link">Revenir à l'index</a>
+      </div>
+    </div>
+</div>

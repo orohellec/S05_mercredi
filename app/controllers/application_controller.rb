@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
   def current_user
     return nil if !session[:auth] || !session[:auth]['id']
     return @user if @user
-    @user =  User.find(session[:auth]['id'])
+    @user = User.find_by(session[:auth]['id'])
   end
 end

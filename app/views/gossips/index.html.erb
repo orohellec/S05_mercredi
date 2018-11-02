@@ -1,0 +1,11 @@
+<div id="gossips_container">
+  <% @all_gossips.each do |gossip| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= User.where(id: gossip[:user_id])[0]["username"] %></h5>
+        <p class="card-text"><%= gossip[:content] %></p>
+        <a href="/gossips/ <%= gossip[:id] %> " class="card-link">Card link</a>
+      </div>
+    </div>
+  <% end %>
+</div>

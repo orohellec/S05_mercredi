@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-10.times do |index|
-  Gossip.create!(content: "gossip#{index}", user_id: "#{index}" )
+index = 1
+8.times do |index|
+#  Gossip.create!(content: "gossip#{index}", user_id: "#{index}" )
+#  User.create!(username: "user#{index}", email: "email#{index}@test.com", password: "lala")
   index += 1
 end

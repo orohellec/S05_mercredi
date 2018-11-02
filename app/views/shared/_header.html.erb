@@ -9,18 +9,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/gossip/index">Index des gossips</a>
+          <a class="nav-link" href="/gossips">Index des gossips</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/gossip/new">new gossip</a>
+          <a class="nav-link" href="/gossips/new">new gossip</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/registration/new">inscrivez_vous</a>
+          <a class="nav-link" href="/user/new">inscrivez_vous</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="/sessions/new">connectez_vous</a>
         </li>
+
+          <li class="nav-item">
+            <%= link_to 'Se déconnecter', destroy_session_path, data: {method: :delete}%>
+          </li>
       </ul>
 
     </div>

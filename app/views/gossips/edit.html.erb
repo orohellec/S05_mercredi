@@ -1,0 +1,18 @@
+<%= @one_gossip.id %>
+<%= session[:auth].values[0] %>
+<% if session[:auth] != nil %>
+  <% if session[:auth].values[0] == @one_gossip.id %>
+
+  <h2>Une petite modification?</h2>
+  <%= session[:auth] %>
+  <%= form_for @one_gossip, url: {action: "update"} do |f| %>
+  <%= f.text_area :content, class: 'form-control', placeholder: @one_gossip[:content], size: "42x4.2" %><br/>
+  <%= f.submit "Envoyer", class: "btn btn-primary mb-2"%><br/>
+  <% end %>
+  <%= link_to 'Clique pour détruire', @one_gossip, method: :delete %>
+  <% else %>
+  <%= "Vous n'êtes pas autoriser à effectuer cette action" %>
+  <% end %>
+<% else %>
+  <%= "Vous n'êtes pas autoriser à effectuer cette action" %>
+<% end %>
